@@ -1,35 +1,72 @@
-body, html {
-  height: 100%;
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  background-color: #f5f5f5; /* Adjust the background color as needed */
 }
 
-.container {
+/* Styling for the navigation bar */
+.navbar {
+  background-color: #333; /* Adjust the background color as needed */
+  overflow: hidden;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2; /* Adjust the text color as needed */
   text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-h1 {
-  color: #333;
-}
-
-button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
+/* Main content area */
+.main-content {
+  margin: 20px;
+}
+
+/* Container for the welcome and capture sections */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Adjust the background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+}
+
+/* Header in the container */
+.container h1 {
+  color: #333; /* Adjust the text color as needed */
+  text-align: center;
+}
+
+/* Paragraph in the container */
+.container p {
+  text-align: center;
+}
+
+/* Button styling */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff; /* Adjust the text color as needed */
+  background-color: #4CAF50; /* Adjust the background color as needed */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049; /* Adjust the background color as needed */
+}
+
+/* Status message styling */
 #status {
-  color: red;
-  margin-top: 20px;
+  color: #D8000C; /* Adjust the text color as needed */
+  text-align: center;
 }
