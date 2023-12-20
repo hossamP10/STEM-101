@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recognition Results</title>
-    <link rel="stylesheet" href="D:\stem\static\style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="navbar">
@@ -13,8 +13,12 @@
     <div class="main-content">
         <h1>Recognition Results</h1>
         <div id="resultsContainer">
-            <!-- Results will be inserted here by Flask -->
+            <!-- Placeholder for the name and image -->
+            <p id="resultsName">Name: <span></span></p>
+            <img id="resultsImage" src="" alt="Recognition Result" style="max-width: 100%; height: auto;">
         </div>
     </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
