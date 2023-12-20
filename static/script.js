@@ -7,7 +7,7 @@ function captureImage() {
   fetch('/trigger_capture')
       .then(response => {
           if (!response.ok) {
-              throw new Error('Network response was not ok ' + response.statusText);
+              throw new Error('Network response was not ok: ' + response.statusText);
           }
           return response.json();
       })
@@ -19,16 +19,17 @@ function captureImage() {
           } else {
               // If successful, store the results and redirect to the results page
               sessionStorage.setItem('personName', data.name);
-              sessionStorage.setItem('personImage', data.imageSrc);
-              window.location.href = '/results';
+              sessionStorage.setItem('personImage', data.image_data); // Adjusted to match Flask's response key
+              window.location.href = '/result'; // Adjusted to the correct route
           }
       })
       .catch(error => {
           // If there's an error in the request, show it in the status div
-          document.getElementById('status').textContent = error.message;
+          document.getElementById('status').textContent = 'Error: ' + error.message;
           document.getElementById('status').classList.add('error');
       });
 }
+
 window.addEventListener('DOMContentLoaded', (event) => {
   const name = sessionStorage.getItem('personName');
   const imageSrc = sessionStorage.getItem('personImage');
