@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Your Assistant</title>
-    <link rel="stylesheet" href="D:\stem\static\style.css">
-  </head>
+    <!-- Correctly reference the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
     <div class="container">
         <h1>Welcome to Your Assistant</h1>
         <p>Press the button to take a photo.</p>
         <button id="captureButton" onclick="captureImage()">Capture Image</button>
-        <div id="status">Error capturing image.</div>
     </div>
-    <script src="D:\stem\static\script.js"></script>
-  </body>
+    <!-- Correctly reference the JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
 </html>
